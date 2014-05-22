@@ -1,0 +1,30 @@
+{
+  "name": "chalk256",
+  "version": "0.0.2",
+  "description": "256 color ANSI strings for Node JS",
+  "main": "lib/chalk.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ccheever/ansi256.git"
+  },
+  "author": "Charlie Cheever",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ccheever/ansi256/issues"
+  },
+  "homepage": "https://github.com/ccheever/ansi256",
+  "dependencies": {
+    "chalk": "^0.4.0",
+    "lodash-node": "^2.4.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.6.2",
+    "gulp-coffee": "650Industries/gulp-coffee",
+    "gulp-insert": "^0.3.0",
+    "gulp-plumber": "^0.6.2",
+    "gulp-util": "^2.2.14"
+  }
+}
