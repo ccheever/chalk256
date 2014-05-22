@@ -18,7 +18,9 @@
   "homepage": "https://github.com/ccheever/ansi256",
   "dependencies": {
     "chalk": "^0.4.0",
-    "lodash-node": "^2.4.1"
+    "has-color": "^0.1.7",
+    "lodash-node": "^2.4.1",
+    "strip-ansi": "^0.2.1"
   },
   "devDependencies": {
     "gulp": "^3.6.2",
