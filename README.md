@@ -1,4 +1,4 @@
-klr
+chalk256
 =======
 
 256 color ANSI strings for Node JS
@@ -9,9 +9,9 @@ Examples of things that work:
 
 
   ```
-  var chalk = require('klr');
+  var chalk = require('chalk256');
 
-  // The original `chalk` interface is supported; `klr` is a drop-in replacement
+  // The original `chalk` interface is supported; `chalk256` is a drop-in replacement
   console.log(chalk.magenta.bold("this will be bright magenta"));
 
   // Give a color description as an argument to chalk
