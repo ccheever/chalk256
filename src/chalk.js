@@ -83,12 +83,6 @@ chalk.color = chalk.fg = chalk.foreground = wrap2(ansi.foreground);
 chalk.bg = chalk.background = wrap2(ansi.background);
 chalk.fgbg = wrap2(ansi.fgbg);
 
-for (var i = 0; i < 256; i++) {
-	chalk["ansi" + i] = wrap(ansi.foreground(i));
-	chalk["bgAnsi" + i] = wrap(ansi.background(i));
-}
-
-
 // detect mode if not set manually
 if (chalk.enabled === undefined) {
 	chalk.enabled = chalk.supportsColor;

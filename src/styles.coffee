@@ -58,8 +58,12 @@ for name, _ of capitalizedCssColors
   styles["bg" + name] = styles.bg name
 
 for [name, hex] in xterm256Colors
-  altHex = "$" + hex[1...].toLowerCase()
+  altHex = "x" + hex[1...].toUpperCase()
   styles[altHex] = styles.color hex
   styles["bg" + altHex] = styles.bg hex
+
+for i in [0...256]
+  styles["ansi" + i] = styles.color i
+  styles["bgAnsi" + i] = styles.bg i
 
 module.exports = styles
