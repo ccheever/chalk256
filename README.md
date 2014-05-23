@@ -12,7 +12,7 @@ Examples of things that work:
   console.log(chalk256.color("#ffcc00")("some text")); // Can use any hex color
   console.log(chalk256.bg([100, 150, 250])("some text")); // or give 0-255 RGB values as an array
   console.log(chalk256.fg(['%', 0.5, 0.5, 0.5])("some text")); // or give 0.0-1.0 RGB values as an array
-  console.log(chalk256.color("dodgerblue")("some text")); // or give any CSS color by name (capitalization doesn't matter)
+  console.log(chalk256.color("dodgerblue")("some text")); // or give any CSS color by name (caps don't matter)
   console.log(chalk256.color(100)("some text")); // or just give an ANSI color value
   console.log(chalk256.$87ffaf("some text")); // Hex values of ANSI color codes are exposed as properties on the object
   console.log(chalk256.ansi93("some text")); // ANSI codes are exposed in this way
