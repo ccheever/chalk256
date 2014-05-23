@@ -28,7 +28,7 @@ Examples of things that work:
   console.log(chalk.red.bg("green")("red on green"));
 
   // All the CSS color names are added to chalk
-  console.log(chalk256.GoldenRod("This will be golden rod color"));
+  console.log(chalk.GoldenRod("This will be golden rod color"));
 
   // Hex values work; the nearest color will be used if there isn't an exact match
   console.log(chalk.color("#ffcc00")("You can also say #FC0 or just fc0 or FC0"));
