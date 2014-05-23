@@ -8,8 +8,12 @@ colorDistance = require './color-distance'
 xterm256Colors = require './xterm256-colors'
 ansi = require './ansi'
 
-SYSTEM_CODES = {}
+BASIC_COLORS = {}
+for c, i in ['black', 'red', 'green', 'yellow', 'blue', 'magenta', 'cyan', 'white', 'gray']
+  BASIC_COLORS[c] = i
+BASIC_COLORS.grey = BASIC_COLORS.gray
 
+SYSTEM_CODES = {}
 for i in [0...16]
   SYSTEM_CODES["system" + xterm256Colors[i][0].toLowerCase()] = i
 
@@ -45,7 +49,14 @@ ansi256ColorCodeForDescription = (desc) ->
   """
 
   if isString desc
+
+    if BASIC_COLORS[desc]?
+      return BASIC_COLORS[desc]
+
     lc = desc.toLowerCase()
+
+    if SYSTEM_CODES[lc]?
+      return SYSTEM_CODES[lc]
 
     if namesToAnsiColors[lc]?
       return namesToAnsiColors[lc]
@@ -58,9 +69,6 @@ ansi256ColorCodeForDescription = (desc) ->
           return hexToAnsi "#" + lc[0] + lc[0] + lc[1] + lc[1] + lc[2] + lc[2]
       else
         return hexToAnsi lc
-
-    if SYSTEM_CODES[lc]?
-      return SYSTEM_CODES[lc]
 
     throw new AnsiColorDescriptionError "Don't know how to interpret String #{ desc }", desc
 
@@ -94,7 +102,6 @@ ansi256ColorCodeForDescription = (desc) ->
     return desc
 
   throw new AnsiColorDescriptionError "Don't know how to interpret description", desc
-
 
 
 ansi256ColorCodeForDescription.nameForColorCode = nameForAnsi256ColorCode
