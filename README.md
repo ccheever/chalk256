@@ -3,7 +3,7 @@ klr
 
 256 color ANSI strings for Node JS
 
-Implements the same interface as [chalk](https://github.com/sindresorhus/chalk) but also adds support for 256 colors.
+A drop-in replacement for [chalk](https://github.com/sindresorhus/chalk) but also adds support for 256 colors.
 
 Examples of things that work:
 
