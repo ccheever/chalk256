@@ -3,9 +3,13 @@ var crayon = require('crayon');
 var capitalizedCssColors = require('./capitalized-css-colors');
 
 // Layer on the CSS color names
-for (var colorName in capitalizedCssColors) {
-  crayon[colorName] = crayon[colorName.toLowerCase()] = crayon(colorName);
-  crayon['bg' + colorName] = crayon['bg' + colorName[0].toUpperCase() + colorName.slice(1).toLowerCase()] = crayon(undefined, colorName);
+for (var c in capitalizedCssColors) {
+  var fg = crayon[c] = crayon[c.toLowerCase()] = crayon(c);
+  var bg = crayon['bg' + c] = crayon['bg' + c[0].toUpperCase() + c.slice(1).toLowerCase()] = crayon(undefined, c);
+  for (var c2 in capitalizedCssColors) {
+    fg['bg' + c2] = fg['bg' + c[0].toUpperCase() + c.slice(1).toLowerCase()] = crayon(c, c2);
+    bg[c2] = bg[c2.toLowerCase()] = crayon(c, c2);
+  }
 }
 
 

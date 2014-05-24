@@ -14,11 +14,13 @@ var chalk = require('chalk256');
 console.log(chalk.magenta.bold("this will be bright magenta"));
 
 // In chalk256, all the CSS color names are added to chalk
-// (though you can't chain with these yet)
 console.log(chalk.goldenrod("This will be a rich yellow  color"));
 
 // Also works for background color setting
-console.log(chalk.bgGoldenrod("Will add chaining in future versions"));
+console.log(chalk.bgGoldenrod("This will be hard to read!"));
+
+// These can be chained in some ways
+console.log(chalk256.inverse(chalk256.bgDarkblue.gold("ssa")));
 
 // Give a color description as an argument to chalk
 console.log(chalk("darkred")("this will be dark red"));
