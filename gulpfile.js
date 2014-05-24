@@ -8,7 +8,7 @@ var fs = require('fs');
 
 var paths = {
   coffee: ['src/**/*.coffee'],
-  static: ['src/**/*.js', 'src/**/*.json'],
+  static: ['src/**/*.json'],
 };
 
 gulp.task('coffee', function () {
