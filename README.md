@@ -3,7 +3,7 @@ chalk256
 
 256 color ANSI strings for Node JS
 
-A drop-in replacement for [chalk](https://github.com/sindresorhus/chalk) but also adds support for 256 colors. It is a layer on top of the simpler [crayon](https://github.com/aceface/crayon)
+A drop-in replacement for [chalk](https://github.com/sindresorhus/chalk) but also adds support for 256 colors. It is a layer on top of the simpler [crayon](https://github.com/aceface/crayon).
 
 Examples of things that work:
 
@@ -20,7 +20,7 @@ console.log(chalk.goldenrod("This will be a rich yellow  color"));
 console.log(chalk.bgGoldenrod("This will be hard to read!"));
 
 // These can be chained in some ways
-console.log(chalk256.inverse(chalk256.bgDarkblue.gold("ssa")));
+console.log(chalk.inverse(chalk.bgDarkblue.gold("ssa")));
 
 // Give a color description as an argument to chalk
 console.log(chalk("darkred")("this will be dark red"));
