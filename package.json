@@ -20,6 +20,5 @@
     "crayon": "git://github.com/aceface/crayon"
   },
   "devDependencies": {
-    "coffee-script": "^1.7.1"
   }
 }
