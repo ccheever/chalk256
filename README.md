@@ -35,6 +35,6 @@ console.log(chalk(null, "gray")("this will be the default text color on gray"));
 console.log(chalk("#ffcc00")("You can also say #FC0 or just fc0 or FC0"));
 
 // Or just give an ANSI color code
-console.log(chalk.color(100)("Anything from 0-255"));
+console.log(chalk(100)("Anything from 0-255"));
 
 ```
